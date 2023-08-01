@@ -9,11 +9,11 @@ Types of Recursion :
 1) Tail Recursion : when recursion statement is written at end, there shouldn'd be any sinle statement after that.
 
 [*] Sample code :
-#incude<stdio.h>
+#include<stdio.h>
 void fun(int n){
     if(n>0){
         printf("%d",n);
-        fun(n-1)                <--- There is not a single statement after this statement.
+        fun(n-1);                //<--- There is not a single statement after this statement.
     }
 }
 int main(){
@@ -24,10 +24,10 @@ int main(){
 2) Head Recursion : when recursion statement is written first, all other statement must be written after recursion statement.
 
 [*] Sample code :
-#incude<stdio.h>
+#include<stdio.h>
 void fun(int n){
     if(n>0){
-        fun(n-1)                <--- There is not a single statement before this statement.
+        fun(n-1);                //<--- There is not a single statement before this statement.
         printf("%d",n);
     }
 }
@@ -39,7 +39,7 @@ int main(){
 3) Tree Recursion : when recursion statement is written more than one time. as below code there are two recursion statements.
 
 [*] Sample code :
-#incude<stdio.h>
+#include<stdio.h>
 void fun(int n){
     if(n>0){
         printf("%d ",n);
@@ -56,7 +56,7 @@ int main(){
    but calling happens in circular manner hence it comes under recursion topic.      (A -> B -> A -> B ->...)
 
 [*] Sample code :
-#incude<stdio.h>
+#include<stdio.h>
 void funB(int n);               //as function is getting called before its definition, so to resolve error we defined function here 
 void funA(int n){
     if(n>0){
@@ -79,7 +79,7 @@ int main(){
    Recursive function will pass Recursive parameter as Recursive call
 
 [*] Sample code :
-#incude<stdio.h>
+#include<stdio.h>
 int fun(int n){
     if(n>100)
         return n-10;
