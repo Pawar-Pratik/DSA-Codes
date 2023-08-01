@@ -1,0 +1,92 @@
+Types of Recursion :
+1) Tail Recursion
+2) Head Recursion
+3) Tree Recursion
+4) Indirect Recursion
+5) Nested Recursion
+
+
+1) Tail Recursion : when recursion statement is written at end, there shouldn'd be any sinle statement after that.
+
+[*] Sample code :
+#incude<stdio.h>
+void fun(int n){
+    if(n>0){
+        printf("%d",n);
+        fun(n-1)                <--- There is not a single statement after this statement.
+    }
+}
+int main(){
+    fun(3);
+}
+
+
+2) Head Recursion : when recursion statement is written first, all other statement must be written after recursion statement.
+
+[*] Sample code :
+#incude<stdio.h>
+void fun(int n){
+    if(n>0){
+        fun(n-1)                <--- There is not a single statement before this statement.
+        printf("%d",n);
+    }
+}
+int main(){
+    fun(3);
+}
+
+
+3) Tree Recursion : when recursion statement is written more than one time. as below code there are two recursion statements.
+
+[*] Sample code :
+#incude<stdio.h>
+void fun(int n){
+    if(n>0){
+        printf("%d ",n);
+        fun(n-1)                #1  
+        fun(n-1)                #2
+    }
+}
+int main(){
+    fun(3);
+}
+
+
+4) Indirect Recursion : theremay multiple functions calling eachother in circular manner, it doesn't calls itself,
+   but calling happens in circular manner hence it comes under recursion topic.      (A -> B -> A -> B ->...)
+
+[*] Sample code :
+#incude<stdio.h>
+void funB(int n);               //as function is getting called before its definition, so to resolve error we defined function here 
+void funA(int n){
+    if(n>0){
+        printf("%d ",n);
+        funB(n-1)               //funA calling funB
+    }
+}
+void funB(int n){
+    if(n>1){
+        printf("%d ",n);
+        funA(n/2)               //funB calling funA
+    }
+}
+int main(){
+    funA(20);
+}
+
+
+5) Nested Recursion : Recursion inside recursion,
+   Recursive function will pass Recursive parameter as Recursive call
+
+[*] Sample code :
+#incude<stdio.h>
+int fun(int n){
+    if(n>100)
+        return n-10;
+        
+    else
+        fun(fun(n+11));         //here function is passed as parameter to recursive function
+}
+int main(){
+    fun(95);
+}
