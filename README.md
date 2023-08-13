@@ -3,5 +3,5 @@
 <p align="center">Based on Abdul Bari's Udemy course</p>
 <h1> </h1>
 <h3 align="center">Topics to be covered</h3>
-<p align="center" ><a href="https://github.com/Pawar-Pratik/DSA-Codes/tree/main/1)%20Basic%20Concepts">1) Basic Concepts</a></p>
-<p align="center"><a href="https://github.com/Pawar-Pratik/DSA-Codes/tree/main/2)%20Recursion" >2) Recursion</a></p>
+<p align="center" ><a href="https://github.com/Pawar-Pratik/DSA-Codes/tree/main/01)%20Basic%20Concepts">1) Basic Concepts</a></p>
+<p align="center"><a href="https://github.com/Pawar-Pratik/DSA-Codes/tree/main/02)%20Recursion" >2) Recursion</a></p>
