@@ -47,6 +47,7 @@ int main(){
     printf("\nAddresses of 1st Array\n");
     for(i=0 ; i<5 ; i++){
         printf("%u \n",&A[i]);
+        
     } 
     //as you can see in output int have 4 bytes, so there every next address is increased by 4.
     return 0;
